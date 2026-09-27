@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -30,8 +31,11 @@ st.divider()
 
 st.header('1️⃣ Load the Dataset')
 
-df = pd.read_csv('advertising_sales_data.csv')
+BASE_DIR = Path(__file__).resolve().parent.parent
 
+data_path = BASE_DIR / "advertising_sales_data.csv"
+
+df = pd.read_csv(data_path)
 st.success('Dataset loaded successfully!')
 
 st.write('Here are the first rows of our dataset:')
