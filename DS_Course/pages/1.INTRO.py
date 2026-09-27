@@ -1,6 +1,4 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-
 st.title('WHAT IS DATA SCIENCE?')
 st.write(
     ''' Data Science is the process of using data, programming, statistics,
